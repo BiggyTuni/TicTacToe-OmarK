@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>TicTacToe</title>
+</head>
+<body>
+
+<!-- this portion is to make the tictactoe grid -->
+<!-- data-"value" stores custom data private to the page or application -->
+
+<div id="game">
+
+<div class="gridCell" data-value ="0"></div> 
+<div class="gridCell" data-value ="1"></div>
+<div class="gridCell" data-value ="2"></div>
+<div class="gridCell" data-value ="3"></div>
+<div class="gridCell" data-value ="4"></div>
+<div class="gridCell" data-value ="5"></div>
+<div class="gridCell" data-value ="6"></div>
+<div class="gridCell" data-value ="7"></div>
+<div class="gridCell" data-value ="8"></div>
+</div>
+
+<!-- this portion is for the buttons and extra texts -->
+<!-- span used to color a portion of text -->
+<!-- button creates the rest button we need to restart the game -->
+
+        <div class="gameOver">
+
+            <span class="game-over-text"></span>
+            <button class="restart"> RESET </button>
+
+
+        </div>   
+    </body>
+</html>

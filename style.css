@@ -1,0 +1,75 @@
+.gridCell {
+    border: 2px solid rgb(252, 0, 0);
+    width: 50px;
+    height: 50px;
+    cursor: pointer; /* Changes the cursor to pointer */
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 35px;
+}
+
+#game{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 0;
+    place-items: center;
+    place-content: center;
+    height: 100vh;
+}
+/* Adds a virtual element after the .x element's content*/
+.x::after{  
+    content: '❌'; 
+}
+/* Adds a virtual element after the .o element's content*/
+.o::after { 
+    content: '⭕';
+}
+
+
+/* adds the disabled class and changed the cursor to the not allowed */
+.disabled {
+    cursor: not-allowed;
+}
+/* excludes elements with the .disabled class from the styling, so the hover effect only applies to active (non-disabled) elements. */
+.gridCell:not(.disabled):hover {
+    background: #eee;
+}
+
+
+/* sets up the game over screen */
+/* .gameOver {
+    
+    display: none;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    box-shadow: rgb(0 0 0 / 50%) 0 0 0 9999px;;
+    
+} */
+
+.gameOver{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgb(0 0 0 / 50%) 0 0 0 9999px;
+}
+/* why does it not work the other way  */
+
+.game-over-text{
+    position: absolute;
+    top: -200px;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    transform: translateX(-30%);
+}
+
+.visible{
+    display: block;
+}
+
